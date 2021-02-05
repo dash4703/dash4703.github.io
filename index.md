@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>What about WallStreetBets</title>
+<title>What about r/WallStreetBets??</title>
 </head>
 <body>
 
-<h1>Heading</h1>
-<p> Well the TL;DR version is that Wall Street bros started losing at their own game to a bunch of civilians after one guy taught everyone how the whole fake system works. 
-r/WallStreetBets is being used in this instance as a revolutionary organization tool. They coordinated an attack on the 1%. From the context of a lot of memes, I've learned that this attack was very personal for some. A lot of us watched our parents go through hard times after Wall Street bailouts in 2008. Having been too young to understand or take any action then, the kids of the parents who lost everything at the hands of Wall Street have come for their revenge.</p>
+<h1>Reddit vs Wall Street</h1>
+
+<p> Well the TL;DR version is that Wall Street bros started losing at their own game to a bunch of civilians after one guy taught everyone how the whole fake system works. r/WallStreetBets is being used in this instance as a revolutionary organization tool. They coordinated an attack on the 1%. From the context of a lot of memes, I've learned that this attack was very personal for some. A lot of us watched our parents go through hard times following Wall Street bailouts in 2008. Having been too young to understand or take any action then, the kids of the parents who lost everything at the hands of Wall Street have come for their revenge.</p>
 
 <p> It's all very exciting to me. We have been sitting on such incredible technologies that allow the little guy to unionize on a massive, even global scale. It is so amazing when we get to see that actually happen. People realized that 1 man with a million dollars is the same as 1 thousand people with 1 thousand dollars, and used that information to redistribute the wealth. It's something we should have been doing all the while. Reddit should be organizing massive rent strikes across the nation until the federal government intervenes with rent cancelation. Reddit should be organizing worker's strikes, teacher's strikes, protests, all of the things. And it is, they are. Little by little we learn about the ways in which we can gain power through numbers, despite countless efforts of authorities both public and private to keep this information from us.</p>
 
-<p> We know that organizing in such volumes is a threat to our enemies and what happened last week demonstrates this perfectly. The public got a hold of only a handful of stocks and manipulated the market so dramatically that almost overnight there was panic and a call for regulation. All of this after years of smaller numbers of people doing the same thing just in secret. All of sudden, when it helps the little guy it's a problem. So…
-I don't think platforms necessarily have an obligation to protect their users, but I do think it would work to their advantage to do so. What we saw with Robinhood is how, when the app turned on its primary user base, it was faced with a flood of backlash in the form of devastating reviews. If it hadn't been for Google's invasive wiping of this from the internet, it would have been the end for the app. But Google can't wipe everything. It is important to always remember the power we have in numbers.</p>
+<p> We know that organizing in such volumes is a threat to our enemies and what happened last week demonstrates this perfectly. The public got a hold of only a handful of stocks and manipulated the market so dramatically that almost overnight there was panic and a call for regulation. All of this after years of smaller numbers of people doing the same thing just in secret. All of sudden, when it helps the little guy it's a problem. So what is to be done about it now? </p>
+
+<p> I don't think platforms necessarily have an obligation to protect their users, but I do think it would work to their advantage to do so. What we saw with Robinhood is how, when the app turned on its primary user base, it was faced with a flood of backlash in the form of devastating reviews. If it hadn't been for Google's invasive wiping of this from the internet, it would have been the end for the app. But Google can't wipe everything. It is important for both us as individuals and for corporations to always remember the power people have in numbers. If businesses want to stay alive during this time of growing public awareness then they have to support their customers (the people) in our endeavors.</p>
+
+<p> The main takeaways from these events are as follows: "the market" is a made-up construct that can be manipulated at will; what we are seeing throughout these events is class warfare; and the affordances of technology promote chances for organization and revolution like never before. </p>
 
 <body>
 </html>
