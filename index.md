@@ -3,7 +3,7 @@
 <head>
 <title> Welcome! </title>
 
-<a href="url">https://dash4703.github.io/wa2.html</a>
+<a href="url">https://dash4703.github.io/wa2</a>
 
 </html>
 
