@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<a href="dash4703.github.io/wa2.html" target="_blank">View Wa2 Here</a>
+<a href="dash4703.github.io/wa2.html" target="_blank">View Wa2 File Here</a>
 
 </body>
 </html>
