@@ -7,6 +7,11 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
+    options: {
+        legendCallback: function(chart) {
+            // Return the HTML string here.
+        }
+    }
         labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple'],
         datasets: [{
             label: 'Number of Things',
@@ -39,10 +44,7 @@ var myChart = new Chart(ctx, {
                         beginAtZero: true
                     }
              }]
-                     title: {
-                        display: true,
-                        text: 'Custom Chart Title'
-            }
+
         }
     }
     
