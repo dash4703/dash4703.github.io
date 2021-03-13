@@ -10,7 +10,7 @@
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'doughnut',
+    type: 'line',
     data: {
         labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple'],
         datasets: [{
@@ -50,6 +50,6 @@ var myChart = new Chart(ctx, {
 });
 </script>
 <body>
-    <p> I removed the ticks because they didn't seem to make sense with the doughnut chart, and I added some margins and padding. I also resized the chart. </p>
+    <p> First off, I changed it from a doughnut chart to a line chart. Then I added some margins and padding. I also resized the chart. </p>
 </body>
 </html>
