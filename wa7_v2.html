@@ -13,8 +13,11 @@ var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
     options: {
-        legendCallback: function(chart) {
-            // Return the HTML string here.
+        legend: {
+            display: true,
+            labels: {
+                fontColor: 'rgb(255, 99, 132)'
+            }
         }
     }
         labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple'],
