@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 7 - V2</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+<canvas id="myChart" width="200" height="100"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple'],
+        datasets: [{
+            label: 'Amount of Color',
+            data: [2, 10, 3, 9, 7, 4],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(153, 102, 255, 1)',
+                
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        layout: {
+            padding: {
+                left: 50,
+                right: 50,
+                top: 0,
+                bottom: 10
+            }
+        }         
+    }
+});
+</script>
+<body>
+    <p> I removed the ticks because they didn't seem to make sense with the doughnut chart, and I added some margins and padding. I also resized the chart. </p>
+</body>
+</html>
