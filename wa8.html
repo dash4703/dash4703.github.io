@@ -25,10 +25,10 @@
 
 <script type="text/javascript">
 
-$.getJSON("output.json", function(output){
+$.getJSON("output.json", function(data){
 
     console.log("you got data")
-    console.log(output)
+    console.log(data)
 
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
