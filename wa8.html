@@ -51,7 +51,12 @@ $.getJSON("arrests.json", function(data){
                     bottom: 10
                 }
             }
-            
+         scales: {
+            yAxes: [{
+                id: 'first-y-axis',
+                type: 'linear'
+            }
+            }    
         }
     });
 
