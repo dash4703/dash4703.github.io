@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome</h1>
+</div>
+
+<div class="container">
+    <h1>Displaying User Data</h1>
+    <p>Log in with your Spotify account and this demo will display information about you fetched using the Spotify Web API</p>
+    <button class="btn btn-primary" id="btn-login">Login</button>
+    <div id="result"></div>
+</div>
+<script id="result-template" type="text/x-handlebars-template">
+    <dl>
+      <img src="{{images.0.url}}">
+      <dt>User Name</dt>
+      <dd>{{id}}</dd>
+      <dt>Display Name</dt>
+      <dd>{{display_name}}</dd>
+      <dt>Country</dt>
+      <dd>{{country}}</dd>
+      <dt>Followers</dt>
+      <dd>{{followers.total}}</dd>
+      <dt>Profile</dt>
+      <dd><a href="{{external_urls.spotify}}" target="_blank">{{external_urls.spotify}}</a></dd>
+      <dt>Email</dt>
+      <dd>{{email}}</dd>
+      <dt>Product</dt>
+      <dd>{{product}}</dd>
+    </dl>
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>
