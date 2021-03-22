@@ -30,7 +30,7 @@ img {
     <div id="result"></div>
 </div>
 <script id="result-template" type="text/x-handlebars-template">
-    <dl>
+  <dl>
       <img src="{{images.0.url}}">
       <dt>User Name</dt>
       <dd>{{id}}</dd>
@@ -99,7 +99,7 @@ img {
         resultsPlaceholder = document.getElementById('result'),
         loginButton = document.getElementById('btn-login');
     
-    loginButton.addEventListener('click', function() {
+    loginButton.addEventListener('onclick', function() {
         login(function(accessToken) {
             getUserData(accessToken)
                 .then(function(response) {
