@@ -8,6 +8,3 @@
     response.write("Hello World");
     response.end();
   }).listen(8888);
-
-cd njtest
-node server.js
