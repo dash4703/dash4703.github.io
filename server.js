@@ -1,4 +1,3 @@
-  /* Load the HTTP library */
   var http = require("http");
 
   /* Create an HTTP server to handle responses */
