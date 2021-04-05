@@ -19,7 +19,7 @@ img {
 </head>
 <body>
 <script>
-var app = '6b73e3b3c8ff4432869ce3d27d627c60'  
+var app = express() 
 app.get('https://accounts.spotify.com/api/token', function(req, res) {
 var scopes = 'user-read-private user-read-email';
 res.redirect('https://accounts.spotify.com/authorize' +
@@ -125,7 +125,7 @@ res.redirect('https://accounts.spotify.com/authorize' +
             });
     });
     
-})();
+});
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
