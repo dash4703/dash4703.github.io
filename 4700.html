@@ -19,7 +19,7 @@ img {
 </head>
 <body>
 <script>
-var app =   
+var app = '6b73e3b3c8ff4432869ce3d27d627c60'  
 app.get('https://accounts.spotify.com/api/token', function(req, res) {
 var scopes = 'user-read-private user-read-email';
 res.redirect('https://accounts.spotify.com/authorize' +
@@ -45,7 +45,7 @@ res.redirect('https://accounts.spotify.com/authorize' +
         <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
       </div>
     </div>
-    <script>
+    <script id="user-profile-template" type="text/x-handlebars-template">
       <h1>Logged in as {{display_name}}</h1>
       <div class="media">
         <div class="pull-left">
