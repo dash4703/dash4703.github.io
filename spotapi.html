@@ -103,7 +103,7 @@
             });
 
             $.ajax({
-                url: 'https://api.spotify.com/v1/me',
+                url: 'https://accounts.spotify.com/authorize?client_id=6955d0073a8a4120ae67584b6880b655&redirect_uri=http:%2F%2Fexample.com%2Fcallback&scope=user-read-private%20user-read-email&response_type=token&state=123',
                 headers: {
                   'Authorization': 'Bearer ' + access_token
                 },
