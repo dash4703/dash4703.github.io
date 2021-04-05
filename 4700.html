@@ -20,7 +20,7 @@ img {
 <body>
 <script>
 app.get('https://accounts.spotify.com/api/token', function(req, res) {
-var scopes = 'user-read-private';
+var scopes = 'user-read-private user-read-email';
 res.redirect('https://accounts.spotify.com/authorize' +
   '?response_type=code' +
   '&client_id=' + '6955d0073a8a4120ae67584b6880b655' +
