@@ -68,7 +68,7 @@ res.redirect('https://accounts.spotify.com/authorize' +
 (function() {
     
     function login(callback) {
-        var CLIENT_ID = '6b73e3b3c8ff4432869ce3d27d627c60';
+        var CLIENT_ID = '6955d0073a8a4120ae67584b6880b655';
         var REDIRECT_URI = 'http://localhost:8080';
         function getLoginURL(scopes) {
             return 'https://accounts.spotify.com/authorize?client_id=' + CLIENT_ID +
@@ -88,7 +88,7 @@ res.redirect('https://accounts.spotify.com/authorize' +
     
         window.addEventListener("message", function(event) {
             var hash = JSON.parse(event.data);
-            if (hash.type == 'BQBMhc1F6opkb_pHpVr5uij3z_b0JKRJ3x0hN38t9kDScUcmtBCMbdwnG-Fg4IEi5GBNF6Rr8evFKLgP8W_Ki2SO1nmLYd6AajAT_QEYSBCb7AwICSPlEpslsy4-AoFJi9VwVY4WEmGcomPNhpm-KfIaKPmPEdeVxqY') {
+            if (hash.type == 'access_token') {
                 callback(hash.access_token);
             }
         }, false);
