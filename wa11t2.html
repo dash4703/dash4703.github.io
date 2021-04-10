@@ -139,9 +139,9 @@
 
 				<section data-auto-animate>
 					<p>Here's how to do it:</p>
-					<pre><code data-trim data-line-numbers="2">
-						(var spec = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  							"config": {
+					<pre><code data-trim data-line-numbers="2">(section
+						var spec = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  						"config": {
     						"view": {
       							"continuousHeight": 300,
       							"continuousWidth": 400
@@ -154,8 +154,8 @@
 				</section>
 				<section data-auto-animate>
 					<p>Here's how to do it:</p>
-					<pre><code data-trim data-line-numbers="2">
-						("mark": "point";
+					<pre><code data-trim data-line-numbers="2">(section
+						"mark": "point";
 						var opt = {"renderer": "canvas", "actions": false};
 						vegaEmbed("#vis", spec, opt);)
 					</code></pre>
