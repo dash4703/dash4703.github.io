@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Reveal.JS Template for Week 13</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Horsepower and Fuel Efficiency</h3>
+					<p>INFO 3402, Spring 2021, Week 13</p>
+				</section>
+
+				<section>
+					<p>Internal combustion engines face a fundamental engineering trade-off</p>
+					<p>More powerful engines are also less fuel efficient.</p>
+				</section>
+
+				<section>
+					<!--Vega visualization goes here-->
+				<div id="vis"></div>
+				<script>
+					var spec = 	{
+		  "$schema": "https://vega.github.io/schema/vega/v5.json",
+		  "description": "A basic stacked area chart example.",
+		  "width": 500,
+		  "height": 200,
+		  "padding": 5,
+
+		  "data": [
+		    {
+		      "name": "table",
+		      "values": [
+		        {"x": 0, "y": 28, "c":0}, {"x": 0, "y": 55, "c":1},
+		        {"x": 1, "y": 43, "c":0}, {"x": 1, "y": 91, "c":1},
+		        {"x": 2, "y": 81, "c":0}, {"x": 2, "y": 53, "c":1},
+		        {"x": 3, "y": 19, "c":0}, {"x": 3, "y": 87, "c":1},
+		        {"x": 4, "y": 52, "c":0}, {"x": 4, "y": 48, "c":1},
+		        {"x": 5, "y": 24, "c":0}, {"x": 5, "y": 49, "c":1},
+		        {"x": 6, "y": 87, "c":0}, {"x": 6, "y": 66, "c":1},
+		        {"x": 7, "y": 17, "c":0}, {"x": 7, "y": 27, "c":1},
+		        {"x": 8, "y": 68, "c":0}, {"x": 8, "y": 16, "c":1},
+		        {"x": 9, "y": 49, "c":0}, {"x": 9, "y": 15, "c":1}
+		      ],
+		      "transform": [
+		        {
+		          "type": "stack",
+		          "groupby": ["x"],
+		          "sort": {"field": "c"},
+		          "field": "y"
+		        }
+		      ]
+		    }
+		  ],
+
+		  "scales": [
+		    {
+		      "name": "x",
+		      "type": "point",
+		      "range": "width",
+		      "domain": {"data": "table", "field": "x"}
+		    },
+		    {
+		      "name": "y",
+		      "type": "linear",
+		      "range": "height",
+		      "nice": true, "zero": true,
+		      "domain": {"data": "table", "field": "y1"}
+		    },
+		    {
+		      "name": "color",
+		      "type": "ordinal",
+		      "range": "category",
+		      "domain": {"data": "table", "field": "c"}
+		    }
+		  ],
+
+		  "axes": [
+		    {"orient": "bottom", "scale": "x", "zindex": 1},
+		    {"orient": "left", "scale": "y", "zindex": 1}
+		  ],
+
+		  "marks": [
+		    {
+		      "type": "group",
+		      "from": {
+		        "facet": {
+		          "name": "series",
+		          "data": "table",
+		          "groupby": "c"
+		        }
+		      },
+		      "marks": [
+		        {
+		          "type": "area",
+		          "from": {"data": "series"},
+		          "encode": {
+		            "enter": {
+		              "interpolate": {"value": "monotone"},
+		              "x": {"scale": "x", "field": "x"},
+		              "y": {"scale": "y", "field": "y0"},
+		              "y2": {"scale": "y", "field": "y1"},
+		              "fill": {"scale": "color", "field": "c"}
+		            },
+		            "update": {
+		              "fillOpacity": {"value": 1}
+		            },
+		            "hover": {
+		              "fillOpacity": {"value": 0.5}
+		            }
+		          }
+		        }
+		      ]
+		    }
+		  ]
+		}
+			var opt = {"renderer": "canvas", "actions": false};
+			vegaEmbed("#vis", spec, opt);
+			</script>
+			</section>
+
+				<section>
+					<p>This relationship is interesting because it is non-linear</p>
+					<p>Fuel efficiency drops rapidly with the increase in horsepower</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+			});
+		</script>
+	</body>
+</html>
