@@ -155,6 +155,19 @@
 				<section data-auto-animate>
 					<p>Here's how to do it:</p>
 					<pre><code data-trim data-line-numbers="2">(section
+						var spec = {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  						"config": {
+    						"view": {
+      							"continuousHeight": 300,
+      							"continuousWidth": 400
+    						}
+  						},
+  					"data": {
+    					"url": "https://vega.github.io/vega-datasets/data/weather.json"
+  						},)
+					</code></pre>
+					<br>
+					<pre><code data-trim data-line-numbers="2">(section
 						"mark": "point";
 						var opt = {"renderer": "canvas", "actions": false};
 						vegaEmbed("#vis", spec, opt);)
