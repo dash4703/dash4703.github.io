@@ -38,7 +38,7 @@
 					<!--Vega visualization goes here-->
 				<div id="vis"></div>
 				<script>
-					var spec = 	{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+					var spec = 	{"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   							"config": {
     						"view": {
       							"continuousHeight": 300,
@@ -62,10 +62,10 @@
       				"type": "quantitative"
     			}
   			},
-  			"mark": "point";
+  			"mark": "point"};
 			var opt = {"renderer": "canvas", "actions": false};
 			vegaEmbed("#vis", spec, opt);
-				</script>
+			</script>
 				</section>
 
 				<section>
