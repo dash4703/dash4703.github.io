@@ -85,6 +85,22 @@
 							"data": {
 								"url": "https://dash4703.github.io/co2-concentration.csv"
 							},
+							"mark": "bar",
+							"encoding": {
+								"x": {
+									"field": "state",
+									"type":"nominal",
+									"sort":"-y"
+								},
+								"y": {
+									"field": "population",
+									"type":"quantitative"
+								}
+							}
+							};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis-bar", spec, opt);
+						</script>
 
 					</section>
 				</section>
