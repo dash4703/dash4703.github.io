@@ -21,7 +21,7 @@
 <canvas id="myChart" width="200" height="100"></canvas>
 <script>
 var test = [];
-$.getJSON("data.json", function (json) {
+$.getJSON("genredata.json", function (json) {
     test.push(json[i].timestamp);
 
 });
@@ -46,7 +46,6 @@ var data = {
         }
     ]
 };
-
 
 var ctx = document.getElementById("myChart").getContext("2d");
 ctx.canvas.width = 1000;
