@@ -138,17 +138,19 @@
 								"url": "https://vega.github.io/vega-datasets/data/penguins.json"
 							},
 							"mark": "point",
-							"color": "Species",
 							"encoding": {
 								"x": {
 									"field": "Flipper Length (mm)",
 									"type":"quantitative",
-									"sort":"-y"
+									"scale": {"zero": false}
 								},
 								"y": {
 									"field": "Body Mass (g)",
 									"type":"quantitative"
+									"scale": {"zero": false}
 								}
+								"color":{"field": "Species", "type": "nominal"},
+								"shape":{"field": "Species", "type": "nominal"}
 							  }
 							};
 						var opt = {"renderer": "canvas", "actions": false};
