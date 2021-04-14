@@ -82,6 +82,32 @@
 					<section>
 						<h2>In-class Exercise 2</h2>
 						<p>Your visualization goes here!</p>
+
+												<div id="vis-bar"></div>
+						<script type="text/javascript">
+						var spec = {
+								"width": 300,
+								"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
+							},
+							"mark": "bar",
+							"encoding": {
+								"x": {
+									"field": "date",
+									"type":"temporal",
+									"sort":"-y"
+								},
+								"y": {
+									"field": "wounds",
+									"type":"quantitative"
+								}
+							  }
+							};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis-bar", spec, opt);
+						</script>
+
 					</section>
 				</section>
 
