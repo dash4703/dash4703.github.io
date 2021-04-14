@@ -127,7 +127,30 @@
 					<section>
 						<h2>In-class Exercise 3</h2>
 						<p>Your visualization goes here!</p>
-
+												<div id="penguins-plot"></div>
+						<script type="text/javascript">
+						var spec = {
+								"width": 300,
+								"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/penguins.json"
+							},
+							"mark": "point",
+							"encoding": {
+								"x": {
+									"field": "Flipper length (mm)",
+									"type":"quantitative",
+									"sort":"-y"
+								},
+								"y": {
+									"field": "Body Mass (g)",
+									"type":"quantitative"
+								}
+							  }
+							};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#penguins-plot", spec, opt);
+						</script>
 					</section>
 				</section>
 
