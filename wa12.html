@@ -46,14 +46,18 @@
 	    				"column": {
 	      					"field": "Horsepower",
 	      					"type": "quantitative"
+	      					"bin": {
+	      						"maxbins":15
+	      					},
+	      					"spacing": 10
 	    				},
 	    				"color":{
 	    					"field": "Origin"
 	    					"type": "nominal"
 	    				},
 		    		"x": {
-		      				"field": "Origin",
-		      				"type": "nominal"
+		      				"field": "Horsepower",
+		      				"type": "quantitative"
 		    			},
 		    		"y": {
 			    			"aggregate": "count"
