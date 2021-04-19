@@ -32,41 +32,34 @@
 					<!--Vega visualization goes here, change color or something-->
 				<div id="vis1"></div>
 				<script>
-					var spec = 	{"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  							"config": {
-    						"view": {
-      							"continuousHeight": 300,
-      							"continuousWidth": 400
-    						}
-  						},
-	  				"data": {
-	    				"url": "https://vega.github.io/vega-datasets/data/cars.json"
-	  						},
-	  				"encoding": {
-	    				"column": {
-	      					"field": "Horsepower",
-	      					"type": "quantitative"
-	      					"bin": {
-	      						"maxbins":15
-	      					},
-	      					"spacing": 10
-	    				},
-	    				"color":{
-	    					"field": "Origin",
-	    					"type": "nominal"
-	    				},
-		    		"x": {
-		      				"field": "Origin",
-		      				"type": "nominal"
-		    			},
-		    		"y": {
-			    			"aggregate": "count",
-			     			"field": "Number of Cars",
-			      			"type": "quantitative"
-		    			},
-		  			},
-	  			"mark": "bar"};
-				var opt = {"renderer": "canvas", "actions": false};
+					var spec = 	{
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/cars.json"
+							},
+							"mark": "bar",
+							"encoding": {
+								"x": {
+									"field": "Horsepower",
+									"type": "quantitative",
+									"bin": {
+										"maxbins": 15
+									},
+									"spacing": 10
+								},
+								"y": {
+									"aggregate": "count", 
+									"title": "Number of Cars",
+									"type": "quantitative"
+								},
+								"column": {
+									"field": "Origin",
+									"type": "nominal"
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
 				vegaEmbed("#vis1", spec, opt);
 				</script>
 				</section>
