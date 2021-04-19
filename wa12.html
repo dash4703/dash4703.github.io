@@ -43,13 +43,17 @@
 	    				"url": "https://vega.github.io/vega-datasets/data/cars.json"
 	  						},
 	  				"encoding": {
-	    				"color": {
-	      					"field": "Origin",
-	      					"type": "nominal"
+	    				"column": {
+	      					"field": "Horsepower",
+	      					"type": "quantitative"
+	    				},
+	    				"color":{
+	    					"field": "Origin"
+	    					"type": "nominal"
 	    				},
 		    		"x": {
-		      			"field": "Horsepower",
-		      				"type": "quantitative"
+		      			"field": "Origin",
+		      				"type": "nominal"
 		    			},
 		    		"y": {
 		     			"field": "Miles_per_Gallon",
