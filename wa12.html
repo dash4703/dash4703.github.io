@@ -29,7 +29,7 @@
 					
 				</section>
 				<section>
-					<!--Vega visualization goes here-->
+					<!--Vega visualization goes here, change color or something-->
 				<div id="vis"></div>
 				<script>
 					var spec = 	{"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
@@ -66,10 +66,36 @@
 					<p>Exlpain data here.</p>
 				</section>
 				<section>
-					<!--2nd visualization goes here-->
+					<!--2nd visualization goes here, use facets and things-->
 				<div id="vis"></div>
 				<script>
-					var spec = 	{}
+					var spec = 	{"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  							"config": {
+    						"view": {
+      							"continuousHeight": 300,
+      							"continuousWidth": 400
+    						}
+  						},
+	  				"data": {
+	    				"url": "https://vega.github.io/vega-datasets/data/cars.json"
+	  						},
+	  				"encoding": {
+	    				"color": {
+	      					"field": "Origin",
+	      					"type": "nominal"
+	    				},
+		    		"x": {
+		      			"field": "Horsepower",
+		      				"type": "quantitative"
+		    			},
+		    		"y": {
+		     			"field": "Miles_per_Gallon",
+		      				"type": "quantitative"
+		    			}
+		  			},
+	  			"mark": "bar"};
+				var opt = {"renderer": "canvas", "actions": false};
+				vegaEmbed("#vis", spec, opt);
 
 				</script>
 				<section>
