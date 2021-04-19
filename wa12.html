@@ -70,13 +70,15 @@
 				<div id="crimea-bar"></div>
 				<script type="text/javascript">
 					var spec = 	{
-								"width": 300,
+								"width": 500,
 								"height": 200,
 							"data": {
 								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
 							},
-							"mark": "bar",
-							"color": "orange",
+							"mark": {
+								"type":"bar",
+								"color": "orange",
+							},
 							"encoding": {
 								"x": {
 									"field": "date",
