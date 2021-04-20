@@ -69,29 +69,27 @@
 				</section>
 				<section>
 				<pre><code data-trim class='js'>
-						"encoding": {
-							"x": {
-								"field": "Origin",
-								"type": "nominal"
+					"encoding": {
+						"x": {
+							"field": "Origin",
+							"type": "nominal"
+						},
+						"y": {								"aggregate": "count", 
+								"title": "Number of Cars",
+								"type": "quantitative"
 							},
-							"y": {
-								"aggregate": "count", 
-									"title": "Number of Cars",
-									"type": "quantitative"
-								},
-							"column": {
-								"field": "Horsepower",
-								"type": "quantitative",
-								"bin": {
+						"column": {
+							"field": "Horsepower",
+							"type": "quantitative",
+							"bin": {
 									"maxbins": 15
-								},
-								"spacing": 10
-								},
-							"color": {
-								"field": "Origin",
-								"type": "nominal"
-								}
-							}
+							},
+							"spacing": 10
+							},
+						"color": {
+							"field": "Origin",
+							"type": "nominal"
+							}							}
 						</code></pre>
 				</section>
 
