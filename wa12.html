@@ -29,7 +29,52 @@
 					
 				</section>
 				<section>
-					<!--Vega visualization goes here, change color or something-->
+					<!--Vega visualization goes here, changed color-->
+				<div id="crimea-bar"></div>
+				<script type="text/javascript">
+					var spec = 	{
+								"width": 500,
+								"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
+							},
+							"mark": {
+								"type":"bar",
+								"color": "purple",
+							},
+							"encoding": {
+								"x": {
+									"field": "date",
+									"type":"temporal",
+									"sort":"-y"
+								},
+								"y": {
+									"field": "wounds",
+									"type":"quantitative"
+								}
+							  }
+							};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#crimea-bar", spec, opt);
+
+				</script>
+				</section>
+				<section>
+					<p> Here I simply changed the color of the bars to purple. </p>
+				</section>
+				<section>
+					<p> Code block explanation </p>
+					<pre><code data-trim data-line-numbers="4">
+						"mark": {
+								"type":"bar",
+								"color": "purple",
+							},
+					</code></pre>
+
+				</section>
+
+				<section>
+					<!--2nd Vega visualization goes here, using facets-->
 				<div id="vis-cars-hist"></div>
 				<script>
 					var spec = 	{
@@ -68,7 +113,7 @@
 					<p>Here I sorted the data with facets.</p>
 				</section>
 				<section>
-				<pre><code data-trim data-line-numbers="19">
+				<pre><code data-trim data-line-numbers="1-19">
 				"encoding": {
 							"x": {
 								"field": "Horsepower",
@@ -89,52 +134,6 @@
 							}
 						}
 						</code></pre>
-				</section>
-
-				<section>
-					<!--2nd visualization goes here, use facets, layering, and things-->
-				<div id="crimea-bar"></div>
-				<script type="text/javascript">
-					var spec = 	{
-								"width": 500,
-								"height": 200,
-							"data": {
-								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
-							},
-							"mark": {
-								"type":"bar",
-								"color": "purple",
-							},
-							"encoding": {
-								"x": {
-									"field": "date",
-									"type":"temporal",
-									"sort":"-y"
-								},
-								"y": {
-									"field": "wounds",
-									"type":"quantitative"
-								}
-							  }
-							};
-						var opt = {"renderer": "canvas", "actions": false};
-						vegaEmbed("#crimea-bar", spec, opt);
-
-				</script>
-				</section>
-
-				<section>
-					<p> Here I simply changed the color of the bars to purple. </p>
-				</section>
-				<section>
-					<p> Code block explanation </p>
-					<pre><code data-trim data-line-numbers="4">
-						"mark": {
-								"type":"bar",
-								"color": "purple",
-							},
-					</code></pre>
-
 				</section>
 				<section>
 					<p> I'm unsure why my code blocks aren't live, if you can see the bug please leave it in the comments! </p>
