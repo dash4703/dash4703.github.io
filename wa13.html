@@ -19,6 +19,17 @@
 					"height": 150,
 					"data":{
 						"url":"https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/492e9a6143d017e8eb08c08ae0006b34/dogecoin_csv.csv" 
+						},
+					"mark": "bar",
+						"encoding": {
+							"x": {
+								"field": "date",
+								"type": "temporal"
+							},
+							"y": {
+								"field": "price(USD)",
+								"type": "quantitative"
+							}							
 						}
 					};
 					var opt = {"renderer": "canvas", "actions": false};
