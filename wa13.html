@@ -19,7 +19,12 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-    	url:"https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/492e9a6143d017e8eb08c08ae0006b34/dogecoin_csv.csv"
+    	labels: ['Dogecoin', 'price(USD)', 'date']
+    	datasets: [{
+    		label: 'price(USD)'
+    		data:"https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/492e9a6143d017e8eb08c08ae0006b34/dogecoin_csv.csv"
+    	}]
+    	
     }
 }
 </script>
