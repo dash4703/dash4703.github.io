@@ -13,6 +13,17 @@
 
 	<p><a href="https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/492e9a6143d017e8eb08c08ae0006b34/dogecoin_csv.csv" target="blank"></a></p>
 
+<canvas id="myChart" width="200" height="100"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+    	url:"https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/492e9a6143d017e8eb08c08ae0006b34/dogecoin_csv.csv"
+    }
+}
+</script>
+
 
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
