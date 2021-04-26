@@ -21,14 +21,14 @@ d3.csv('https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/49
 
 function makeChart(date) {
   var dateLabels = date.map(function(d) {return d.date});
-  var priceData = date.map(function(d) {return d.price});
+  var blockData = date.map(function(d) {return d.blockCount});
 var chart = new Chart('chart', {
   type: 'horizontalBar',
   data: {
     labels: dateLabels,
     datasets: [
       {
-        data: priceData
+        data: blockData
       }
     ]
   }
