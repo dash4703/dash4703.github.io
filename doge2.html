@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Weekly Assignment 13</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/blood.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Weekly Assignment 13</h3>
+					<p>INFO 3402, Spring 2021</p>
+				</section>
+				<section>
+					<p>The following is a bar chart that examines the frequency of wounds from the Crimean War.*</p>
+					<br>
+					<p> (*I think) </p>
+					
+				</section>
+				<section>
+					<!--Vega visualization goes here, changed color-->
+				<div id="crimea-bar"></div>
+				<script type="text/javascript">
+					var spec = 	{
+								"width": 500,
+								"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
+							},
+							"mark": {
+								"type":"bar",
+								"color": "purple",
+							},
+							"encoding": {
+								"x": {
+									"field": "date",
+									"type":"temporal",
+									"sort":"-y"
+								},
+								"y": {
+									"field": "wounds",
+									"type":"quantitative"
+								}
+							  }
+							};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#crimea-bar", spec, opt);
+
+				</script>
+				</section>
+				<section>
+					<p> Here I simply changed the color of the bars to purple. </p>
+				</section>
+				<section>
+					<p> Code block explanation </p>
+					<pre><code data-trim data-line-numbers="4">
+						"mark": {
+								"type":"bar",
+								"color": "purple",
+							},
+					</code></pre>
+
+				</section>
+
+				<section>
+					<!--2nd Vega visualization goes here, using facets-->
+				<div id="vis-cars-hist"></div>
+				<script>
+					var spec = 	{
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/cars.json"
+							},
+							"mark": "bar",
+							"encoding": {
+								"x": {
+									"field": "Horsepower",
+									"type": "quantitative",
+									"bin": {
+										"maxbins": 15
+									},
+									"spacing": 10
+								},
+								"y": {
+									"aggregate": "count", 
+									"title": "Number of Cars",
+									"type": "quantitative"
+								},
+								"column": {
+									"field": "Origin",
+									"type": "nominal"
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+				vegaEmbed("#vis-cars-hist", spec, opt);
+				</script>
+				</section>
+
+				<section>
+					<p>Here I sorted the Cars data with facets.</p>
+				</section>
+				<section>
+				<pre><code data-trim data-line-numbers="1-19">
+				"encoding": {
+							"x": {
+								"field": "Horsepower",
+								"type": "quantitative",
+								"bin": {
+									"maxbins": 15
+								},
+								"spacing": 10
+							},
+							"y": {
+								"aggregate": "count", 
+								"title": "Number of Cars",
+								"type": "quantitative"
+							},
+							"column": {
+								"field": "Origin",
+								"type": "nominal"
+							}
+						}
+						</code></pre>
+				</section>
+				<section>
+					<p> From these graphs we can see that the USA produces higher horsepower cars. </p>
+				</section>
+				<section>
+					<h3> Editor's Note </h3>
+					<p> I'm unsure why my code blocks aren't live, if you can see the bug please let me know in the comments. </p>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+			});
+		</script>
+	</body>
+</html>
