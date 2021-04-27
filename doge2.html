@@ -25,11 +25,41 @@
 					<p>INFO 3402, Spring 2021</p>
 				</section>
 				<section>
+					<!--1st Vega visualization goes here, using facets-->
+				<div id="vis-hist"></div>
+				<script>
+					var spec = 	{
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"height": 200,
+							"data": {
+								"url": "https://raw.githubusercontent.com/cuinfoscience/INFO3402-Spring2021/main/Week16/DOGE-USD.csv"
+							},
+							"mark": {
+								"type":"point",
+								"color": "purple",
+							},
+							"encoding": {
+								"x": {
+									"field": "Date",
+									"type":"temporal",
+									
+								},
+								"y": {
+									"field": "Volume",
+									"type":"quantitative"
+								}
+							  }
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+				vegaEmbed("#vis-hist", spec, opt);
+				</script>
+				</section>
+				<section>
 					<p>The following is a bar chart that examines the frequency of wounds from the Crimean War.</p>
 					
 				</section>
 				<section>
-					<!--Vega visualization goes here, changed color-->
+					<!--2nd Vega visualization goes here, changed color-->
 				<div id="crimea-bar"></div>
 				<script type="text/javascript">
 					var spec = 	{
@@ -60,38 +90,7 @@
 				</script>
 				</section>
 				<section>
-					<p> The following is Doge Data. </p>
-				</section>
-
-				<section>
-					<!--2nd Vega visualization goes here, using facets-->
-				<div id="vis-hist"></div>
-				<script>
-					var spec = 	{
-							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-							"height": 200,
-							"data": {
-								"url": "https://raw.githubusercontent.com/cuinfoscience/INFO3402-Spring2021/main/Week16/DOGE-USD.csv"
-							},
-							"mark": {
-								"type":"point",
-								"color": "purple",
-							},
-							"encoding": {
-								"x": {
-									"field": "Date",
-									"type":"temporal",
-									
-								},
-								"y": {
-									"field": "Volume",
-									"type":"quantitative"
-								}
-							  }
-						};
-						var opt = {"renderer": "canvas", "actions": false};
-				vegaEmbed("#vis-hist", spec, opt);
-				</script>
+					<p> The following is Doge Data that shows the increase in volume of Doge coin over time. </p>
 				</section>
 
 				<section>
