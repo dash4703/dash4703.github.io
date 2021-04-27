@@ -33,6 +33,37 @@ var chart = new Chart('chart', {
 });
 }
 </script>
+<br>
+<p> Words here! </p>
+<br>
+<div id="crimea-bar"></div>
+				<script type="text/javascript">
+					var spec = 	{
+								"width": 500,
+								"height": 200,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
+							},
+							"mark": {
+								"type":"bar",
+								"color": "purple",
+							},
+							"encoding": {
+								"x": {
+									"field": "date",
+									"type":"temporal",
+									"sort":"-y"
+								},
+								"y": {
+									"field": "wounds",
+									"type":"quantitative"
+								}
+							  }
+							};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#crimea-bar", spec, opt);
+
+				</script>
 
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
