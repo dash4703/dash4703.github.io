@@ -77,37 +77,32 @@
 
 				<section>
 					<!--2nd Vega visualization goes here, using facets-->
-				<div id="vis-cars-hist"></div>
+				<div id="vis-hist"></div>
 				<script>
 					var spec = 	{
 							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 							"height": 200,
 							"data": {
-								"url": "https://vega.github.io/vega-datasets/data/cars.json"
+								"name": "https://raw.githubusercontent.com/cuinfoscience/INFO3402-Spring2021/main/Week16/DOGE-USD.csv"
 							},
-							"mark": "bar",
+							"mark": {
+								"type":"point",
+								"color": "purple",
+							},
 							"encoding": {
 								"x": {
-									"field": "Horsepower",
-									"type": "quantitative",
-									"bin": {
-										"maxbins": 15
-									},
-									"spacing": 10
+									"field": "Date",
+									"type":"temporal",
+									
 								},
 								"y": {
-									"aggregate": "count", 
-									"title": "Number of Cars",
-									"type": "quantitative"
-								},
-								"column": {
-									"field": "Origin",
-									"type": "nominal"
+									"field": "Volume",
+									"type":"quantitative"
 								}
-							}
+							  }
 						};
 						var opt = {"renderer": "canvas", "actions": false};
-				vegaEmbed("#vis-cars-hist", spec, opt);
+				vegaEmbed("#vis-hist", spec, opt);
 				</script>
 				</section>
 
