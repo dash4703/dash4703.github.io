@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Weekly Assignment 13</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/sky.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Weekly Assignment 14</h3>
+					<p>INFO 3402, Spring 2021</p>
+				</section>
+				<section>
+					<p> The following is Doge Data that shows the increase in volume of Doge coin over time. </p>
+				</section>
+				<section>
+					<!--1st Vega visualization goes here, using facets-->
+				<div id="vis-hist"></div>
+				<script>
+					var spec = 	{
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"height": 200,
+							"data": {
+								"url": "https://raw.githubusercontent.com/cuinfoscience/INFO3402-Spring2021/main/Week16/DOGE-USD.csv"
+							},
+							"mark": {
+								"type":"point",
+								"color": "purple",
+							},
+							"encoding": {
+								"x": {
+									"field": "Date",
+									"type":"temporal",
+									
+								},
+								"y": {
+									"field": "Volume",
+									"type":"quantitative"
+								}
+							  }
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+				vegaEmbed("#vis-hist", spec, opt);
+				</script>
+				</section>
+								<section>
+					<h3> Editor's Note </h3>
+					<p> If you use your imagination this IS a 20/20 ;) </p>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				// Learn about plugins: https://revealjs.com/plugins/
+			});
+		</script>
+	</body>
+</html>
